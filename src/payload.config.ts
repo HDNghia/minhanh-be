@@ -1,6 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -16,7 +16,6 @@ import PostRecommend from './global-configs/postRecommend'
 import { Question } from './collections/Question'
 import Contact from './collections/Contact'
 import { Posts } from './collections/Posts'
-import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 
 const filename = fileURLToPath(import.meta.url)
@@ -58,18 +57,6 @@ export default buildConfig({
       },
     },
   },
-  collections: [Users, Media, Posts, Product, Question, Contact],
-  globals: [ProductRecommend, BestProduct, PostRecommend],
-  editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
-  typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
-  },
-  db: postgresAdapter({
-    pool: {
-      connectionString: process.env.DATABASE_URI || '',
-    },
-  }),
   email: nodemailerAdapter({
     defaultFromAddress: 'huynhdangnghia68@gmail.com',
     defaultFromName: 'Huynh Dang Nghia',
@@ -80,6 +67,18 @@ export default buildConfig({
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+    },
+  }),
+  collections: [Users, Media, Posts, Product, Question, Contact],
+  globals: [ProductRecommend, BestProduct, PostRecommend],
+  editor: lexicalEditor(),
+  secret: process.env.PAYLOAD_SECRET || '',
+  typescript: {
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
+  },
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URI || '',
     },
   }),
   sharp,

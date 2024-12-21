@@ -1174,12 +1174,6 @@ packages:
     peerDependencies:
       payload: 3.0.0-beta.122
 
-  '@payloadcms/email-nodemailer@3.0.0-beta.122':
-    resolution: {integrity: sha512-NsF8h1IrjGP+KhWKXNxv8KI88HMJ6rMOFp3whSd45lt9PWqoW0uDFqMygF0uKE7ep33C46UDNEMc/EwTdDjZHQ==}
-    engines: {node: ^18.20.2 || >=20.9.0}
-    peerDependencies:
-      payload: 3.0.0-beta.122
-
   '@payloadcms/graphql@3.0.0-beta.122':
     resolution: {integrity: sha512-16jx01UPP3rfFAtMi8YWc5hXK/oFnczeMX1PemvdskhszHLaTH4i9AbgbTw0acs4de85jkf+uhiob5op4KTPZg==}
     hasBin: true
@@ -5302,11 +5296,6 @@ snapshots:
       - sql.js
       - sqlite3
 
-  '@payloadcms/email-nodemailer@3.0.0-beta.122(payload@3.0.0-beta.122(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0-rc-65a56d0e-20241020(react@19.0.0-rc-65a56d0e-20241020))(react@19.0.0-rc-65a56d0e-20241020)(typescript@5.6.3))':
-    dependencies:
-      nodemailer: 6.9.10
-      payload: 3.0.0-beta.122(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0-rc-65a56d0e-20241020(react@19.0.0-rc-65a56d0e-20241020))(react@19.0.0-rc-65a56d0e-20241020)(typescript@5.6.3)
-
   '@payloadcms/graphql@3.0.0-beta.122(graphql@16.10.0)(payload@3.0.0-beta.122(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0-rc-65a56d0e-20241020(react@19.0.0-rc-65a56d0e-20241020))(react@19.0.0-rc-65a56d0e-20241020)(typescript@5.6.3))(typescript@5.6.3)':
     dependencies:
       graphql: 16.10.0
@@ -5355,7 +5344,6 @@ snapshots:
       '@aws-sdk/client-s3': 3.717.0
       '@aws-sdk/credential-providers': 3.716.0(@aws-sdk/client-sso-oidc@3.716.0(@aws-sdk/client-sts@3.716.0))
       '@aws-sdk/lib-storage': 3.717.0(@aws-sdk/client-s3@3.717.0)
-      '@payloadcms/email-nodemailer': 3.0.0-beta.122(payload@3.0.0-beta.122(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0-rc-65a56d0e-20241020(react@19.0.0-rc-65a56d0e-20241020))(react@19.0.0-rc-65a56d0e-20241020)(typescript@5.6.3))
       amazon-cognito-identity-js: 6.3.12
       nodemailer: 6.9.10
       payload: 3.0.0-beta.122(graphql@16.10.0)(monaco-editor@0.52.2)(react-dom@19.0.0-rc-65a56d0e-20241020(react@19.0.0-rc-65a56d0e-20241020))(react@19.0.0-rc-65a56d0e-20241020)(typescript@5.6.3)
